@@ -1,0 +1,18 @@
+.Cont{
+    display: flex;
+    flex-direction: column;
+}
+.Controls{
+    display: flex;
+    justify-content: center;
+}
+.Button{
+    background-color: black;
+    color: white;
+    width: 30px;
+    margin: 10px;
+}
+.Number{
+    width: 30px;
+    margin: 10px;
+}
