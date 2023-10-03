@@ -1,15 +1,16 @@
+import './item.css';
 
 const Item = ({id, name, img, price, stock}) => {
     
     return (
-        <article>
-            <header>
-                <h2>
-
+        <article className="CardItem">
+            <header clasName="Header">
+                <h2 className='Title'>
+                    {name}
                 </h2>
             </header>
-            <picture>
-                <img src={img} alt={name} className ="ItemImg"/>
+            <picture >
+                <img src={img} alt={name} className ="ItemImg" width='150px'/>
             </picture>
             <section>
                 <p className="Info">
