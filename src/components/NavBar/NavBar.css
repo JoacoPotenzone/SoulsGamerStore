@@ -1,0 +1,20 @@
+.Brand{
+    color: white;
+    text-decoration: none;
+}
+.ActiveOption{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.ActiveOption:hover{
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.457);
+    border-radius: 10px;
+}
+.Option{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    text-align: center;
+}

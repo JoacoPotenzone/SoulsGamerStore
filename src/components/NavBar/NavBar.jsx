@@ -4,22 +4,24 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget'
+import { NavLink, Link} from 'react-router-dom'
 
 
 const NavBar = () => {
     return(
         <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">SoulsGamerStore</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <Link className='Brand' to='/'>SoulsGamerStore</Link>
+          </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#store">Store</Nav.Link>
-            <Nav.Link href="#aboutus">About Us</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link href="#profile">Profile</Nav.Link>
+            <NavLink to={`#Store`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Store</NavLink>
+            <NavLink to={`/AboutUs`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>About Us</NavLink>
+            <NavLink to={`/Contact`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Contact</NavLink>
+            <NavLink to={`/Profile`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Profile</NavLink>
           </Nav>
           <CartWidget></CartWidget>
         </Container>
-
       </Navbar>
     );
 }

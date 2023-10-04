@@ -1,0 +1,19 @@
+.Categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 40px
+}
+.ActiveOption1{
+    color: black;
+    text-decoration: none;
+}
+.Option1{
+    color: black;
+    text-decoration: none;
+
+}
+.Option1:hover{
+    background-color: rgba(0, 0, 0, 0.128);
+    border-radius: 10px;
+}
