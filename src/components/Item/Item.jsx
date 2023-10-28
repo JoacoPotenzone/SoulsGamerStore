@@ -1,11 +1,12 @@
 import './item.css';
 import { Link} from 'react-router-dom'
+import {products} from '../../mock/asyncMock'
 
-const Item = ({id, name, img, price, stock}) => {
+const Item = ({id, name, img, price, stock}) => {  
     
     return (
         <article className="CardItem">
-            <header clasName="Header">
+            <header className="Header">
                 <h2 className='Title'>
                     {name}
                 </h2>
@@ -14,10 +15,10 @@ const Item = ({id, name, img, price, stock}) => {
                 <img src={img} alt={name} className ="ItemImg" width='150px'/>
             </picture>
             <section>
-                <p className="Info">
+                <p className="InfoItem">
                     Price: U$D{price}
                 </p>
-                <p className="Info">
+                <p className="InfoItem">
                     Stock: {stock}
                 </p>
             </section>

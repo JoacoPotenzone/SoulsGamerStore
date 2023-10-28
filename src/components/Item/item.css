@@ -5,6 +5,7 @@
     justify-content: space-between;
     width: 200px;
     border-radius: 1rem;
+    padding: 4px;
 }
 .Title{
     color: rgba(255, 255, 255, 0.382);
@@ -13,7 +14,7 @@
     border-radius: 1rem;
     box-shadow: 3px 1px 0 rgba(255, 255, 255, 0.763);
 }
-.Info{
+.InfoItem{
     color: rgba(255, 255, 255, 0.382);
     margin-bottom: 5px;
 }

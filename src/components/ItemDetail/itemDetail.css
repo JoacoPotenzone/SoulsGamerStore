@@ -5,6 +5,7 @@
     width: 500px;
     border-radius: 1rem;
     margin: 2rem;
+    padding: 4px;
 }
 .Title{
     color: rgba(255, 255, 255, 0.382);
@@ -16,4 +17,16 @@
 .Info{
     color: rgba(255, 255, 255, 0.382);
     margin-bottom: 5px;
+    background-color: rgba(72, 70, 70, 0.32);
+}
+.Info1{
+    color: rgba(255, 255, 255, 0.382);
+    margin-bottom: 5px;
+    padding: 4px;
+}
+.Option2{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 2px;
 }

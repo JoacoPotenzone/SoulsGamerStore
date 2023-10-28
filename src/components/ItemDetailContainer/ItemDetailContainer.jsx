@@ -1,11 +1,8 @@
 import {useState, useEffect} from 'react';
-import { getProductById } from '../../asyncMock';
+import { getProductById } from '../../mock/asyncMock';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom'
 import './ItemDetailContainer.css'
-import { NavLink} from 'react-router-dom'
-
-
 
 
 const ItemDetailContainer = () => {
