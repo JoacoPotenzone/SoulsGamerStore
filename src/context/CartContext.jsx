@@ -7,25 +7,32 @@ export const CartProvider = ({children}) => {
 
     console.log(cart)
     const addItem = (item, quantity) =>{
-        if(isInCart(item.id)){    
-            setCart(prev =>[...prev,{...item, quantity}])
+
+        if(isInCart(item.id)){
+            setCart(cart.map((product)=>{
+                if(product.id === item.id){
+                    return({...product, quantity : product.quantity + quantity})
+                }else{
+                    return product
+                }
+            }))
         }else{
-            console.error('El producto ya fue agregado.')
+            setCart([...cart, {...item, quantity}])
         }
     }
     
-    const removeItem = (itemId) => {
-        const cartUpdated = cart.filter(prod=> prod.id !== itemId)
-        setCart(cartUpdated)
+    const removeItem = (id) => {
+        setCart(cart.filter((item)=> item.id !== id))
     }
     
     const clearCart = () => {
         setCart([])
     }
 
-    const isInCart = (itemId) => {
-        return cart.some(prod => prod.id === itemId)
+    const isInCart = (id) => {
+        return cart.some((item) => item.id === id)
     }
+
     return(
         <CartContext.Provider value={{cart, addItem, removeItem, clearCart}}>
             {children}

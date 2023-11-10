@@ -8,7 +8,7 @@ import './ItemDetailContainer.css'
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
 
-    const { itemId} = useParams()
+    const {itemId} = useParams()
  
     useEffect(() => {
         getProductById(itemId)

@@ -15,7 +15,7 @@ function App() {
           <NavBar></NavBar>
               <Routes>
                 <Route path='/' element={<ItemListContainer greeting ='¡Bienvenidos a SoulsGamerStore!'></ItemListContainer>} />
-                <Route path='/category/:categoryId' element={<ItemListContainer></ItemListContainer>} />
+                <Route path='/category' element={<ItemListContainer></ItemListContainer>} />
                 <Route path='/item/:itemId' element={  <ItemDetailContainer />} />
                 <Route path='*' element ={<h1>404 NOT FOUND</h1>} />
               </Routes> 

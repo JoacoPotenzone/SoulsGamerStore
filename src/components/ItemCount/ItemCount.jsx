@@ -1,11 +1,12 @@
 import'./itemCount.css';
 import {useState} from 'react';
+import { products } from '../../mock/asyncMock';
 
-const ItemCount = ({stock, initial, onAdd}) =>{
+const ItemCount = ({ initial, onAdd}) =>{
     const [quantity, setQuantity] = useState(initial);
 
     const increment = () => {
-        if(quantity < stock){
+        if(quantity < products.stock){
             setQuantity(quantity+1)
         }
     }
@@ -24,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
                 <button className="Button" onClick={increment}>+</button>
             </div>
             <div>
-                <button className='Button1' onClick={()=> onAdd(quantity)} disabled={!stock}>Add to Cart</button>
+                <button className='Button1' onClick={()=> onAdd(quantity)} disabled={!products.stock}>Add to Cart</button>
             </div>
         </div>
     )
