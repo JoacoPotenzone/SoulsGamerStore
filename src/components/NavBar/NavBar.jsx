@@ -11,13 +11,13 @@ const NavBar = () => {
     return(
         <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="">
             <Link className='Brand' to='/'>SoulsGamerStore</Link>
           </Navbar.Brand>
           <Nav className="me-auto">
-            <NavLink to={`/Videogames`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Videogames</NavLink>
-            <NavLink to={`/Console`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Console</NavLink>
-            <NavLink to={`/Accesories`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesories</NavLink>
+            <NavLink to={`/category/videogame`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Videogames</NavLink>
+            <NavLink to={`/category/console`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Console</NavLink>
+            <NavLink to={`/category/accesories`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesories</NavLink>
           </Nav>
           <CartWidget></CartWidget>
         </Container>

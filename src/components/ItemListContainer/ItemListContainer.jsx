@@ -13,13 +13,16 @@ const ItemListContainer = ({greeting}) => {
 
     useEffect(()=>{
         setLoading(true)
-        const collecProducts = categoryId ? query(collection(db, "products"), where('category', '==', categoryId)):collection(db, "products")
+        const collecProducts = categoryId ? 
+        query(collection(db, "products"), where('category', '==', categoryId))
+        : collection(db, "products")
+
         getDocs(collecProducts)
         .then((res)=> {
-            const list = res.docs.map((products)=>{
+            const list = res.docs.map(doc =>{
+                const data = doc.data()
                 return{
-                    id:products.id,
-                    ...products.data()
+                    id: doc.id, ...data
                 }
             })
             console.log(list)
@@ -32,10 +35,9 @@ const ItemListContainer = ({greeting}) => {
     return (
         <div>
             { 
-            loading ? <p>Cargando...</p>
+            loading ? <p>...Loading</p>
             : <div>
             <h1>{greeting}</h1>
-            <h2>Categories</h2>
             <ItemList products={products}></ItemList>
             </div>
             }
