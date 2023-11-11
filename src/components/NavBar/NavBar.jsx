@@ -15,10 +15,9 @@ const NavBar = () => {
             <Link className='Brand' to='/'>SoulsGamerStore</Link>
           </Navbar.Brand>
           <Nav className="me-auto">
-            <NavLink to={`#Store`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Store</NavLink>
-            <NavLink to={`/AboutUs`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>About Us</NavLink>
-            <NavLink to={`/Contact`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Contact</NavLink>
-            <NavLink to={`/Profile`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Profile</NavLink>
+            <NavLink to={`/Videogames`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Videogames</NavLink>
+            <NavLink to={`/Console`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Console</NavLink>
+            <NavLink to={`/Accesories`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesories</NavLink>
           </Nav>
           <CartWidget></CartWidget>
         </Container>

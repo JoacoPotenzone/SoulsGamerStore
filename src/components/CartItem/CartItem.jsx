@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import './CartItem.css';
 
 const CartItem = ({ item }) => {
-    const { id, name, precio, quantity } = item;
+    const { id, name, price, quantity } = item;
     const { removeItem } = useContext(CartContext);
 
     const handleRemove = () => {
@@ -17,7 +17,7 @@ const CartItem = ({ item }) => {
                     <h2 className="cart-item-name">{name}</h2>
                 </header>
                 <section className="cart-item-details">
-                    <p className="cart-item-price">Precio: ${precio}</p>
+                    <p className="cart-item-price">Precio: ${price}</p>
                 </section>
                 <section className="cart-item-details">
                     <p className="cart-item-quantity">Cantidad: {quantity}</p>
