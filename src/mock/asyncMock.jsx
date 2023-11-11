@@ -1,4 +1,4 @@
-export const  products = [{
+export const  products = [/*{
         id: 1,
         name: 'Dark Souls',
         price: 20.00,
@@ -29,28 +29,27 @@ export const  products = [{
         description:'El mejor juego de la Saga para muchos críticos, ya que combina el mapeado del primero con una parte de la dificultad del segundo, y por lejos, es el que mejores Bosses tiene.'
     },
     {id: 4, name: 'PlayStation 5', price:499.99, category :'console', categoryId: 2, img: '', stock: 20, description: 'Consola de la marca Sony, última generación.'},
-    {id: 5, name:'Auriculares Razer', price: 50, category: 'accesories', categoryId: 3, img: '', stock: 30, description: 'Los auriculares Razer son de lo mejor del mercado.' }
+{id: 5, name:'Auriculares Razer', price: 50, category: 'accesories', categoryId: 3, img: '', stock: 30, description: 'Los auriculares Razer son de lo mejor del mercado.' }*/
 ]
-console.log(products)
+
 
 export const getProducts =() => {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
+        let error = false
         setTimeout(() => {
-            resolve(products)
-        }, 500)
+            if(error){
+                reject ('No hay data, intente más tarde')
+
+            }else{
+                resolve(products)
+            }
+        }, 2000)
     })
 }
-export const getProductById = (productId) =>{
-    return new Promise ((resolve) => {
-        setTimeout(()=> {
-            resolve(products.find(prod => prod.id === productId))
-        }, 500)
-    })
-}
-export const getProductsByCategory = (categoryId) => {
-    return new Promise ((resolve) => {
-        setTimeout(()=> {
-            resolve(products.filter(prod => prod.categoryId === categoryId))
-        },500)
+export const getItem = (id) =>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(products.find((item)=> item.id === id))
+        },2000)
     })
 }

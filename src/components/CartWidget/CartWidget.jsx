@@ -1,23 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {BsCart3} from 'react-icons/bs';
-import {useState} from 'react'
+import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
-const CartWidget = ({children}) => {
+const CartWidget = () => {
 
-    const [item, setItem] = useState(0)
-    function suma() {
-        setItem(item+1)
-    }
+    const {totalQuantity} = useContext(CartContext)
 
-    return( 
-        <>
-        <div>{children}</div>
-            <BsCart3 size='2.5rem' color='white'>
-                {item}
-            </BsCart3>
-            <button onClick={suma}>{item}</button>
-        </>
-        )
+
+    const visibilityClass = totalQuantity() > 0 ? '' : 'hidden';
+
+    return (
+        <Link to='/cart' className={`cart-widget ${visibilityClass}`}>
+            <BsCart3 size='2.5rem' color='white'></BsCart3>
+            <p>{totalQuantity()}</p>
+        </Link>
+    )
 }
 
 export default CartWidget;

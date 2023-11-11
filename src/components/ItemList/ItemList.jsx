@@ -1,8 +1,8 @@
 import Item from '../Item/Item';
 import './itemList.css';
-import { products } from '../../mock/asyncMock';
 
-const ItemList = () => {
+
+const ItemList = ({products}) => {
     return(
         <div className='ListGroup'>
             {products.map(prod => <Item key={prod.id} {...prod} />)}
