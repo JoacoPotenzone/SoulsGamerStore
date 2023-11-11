@@ -67,3 +67,14 @@
 .checkout-link:hover {
     background-color: #43a047;
 }
+.counter-button{
+    color: #fff;
+    background-color: #000;
+    padding: .8rem;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.counter-button:hover{
+    background-color: #333;
+    color: #fff;
+}
